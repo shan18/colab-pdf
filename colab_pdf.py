@@ -1,4 +1,4 @@
-def colab_pdf(file_name, notebookpath="/content/drive/MyDrive/Colab Notebooks/"):
+def colab_pdf(file_name, notebookpath="/content/drive/MyDrive/Assignments/DL Systems/HW1"):
     import os
 
     # Checking if file_name passed is a string.
@@ -9,7 +9,7 @@ def colab_pdf(file_name, notebookpath="/content/drive/MyDrive/Colab Notebooks/")
 
     # Using the defaults used by google.colab
     drive_mount_point = "/content/drive/"
-    gdrive_home = os.path.join(drive_mount_point, "My Drive/")
+    gdrive_home = os.path.join(drive_mount_point, "MyDrive/")
 
     # If the drive is not already mounted, attempt to mount it.
     if not os.path.isdir(gdrive_home):
@@ -35,7 +35,7 @@ def colab_pdf(file_name, notebookpath="/content/drive/MyDrive/Colab Notebooks/")
     # Attempt to convert to pdf and save it in Gdrive home dir using jupyter nbconvert command.
     try:
         get_ipython().system(
-            "jupyter nbconvert --output-dir='$gdrive_home' '$notebookpath''$file_name' --to pdf"
+            "jupyter nbconvert --output-dir='$gdrive_home' '$notebookpath'/'$file_name' --to pdf"
         )
     except:
         return "nbconvert error"
