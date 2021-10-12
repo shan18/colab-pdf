@@ -3,7 +3,7 @@
 
 Paste and run this in your colab notebook in the last cell.
 ```ipython
-!wget -nc https://raw.githubusercontent.com/brpy/colab-pdf/master/colab_pdf.py
+!wget -nc https://raw.githubusercontent.com/shan18/colab-pdf/master/colab_pdf.py
 from colab_pdf import colab_pdf
 colab_pdf('pandas-assignment.ipynb')
 ```
@@ -22,7 +22,7 @@ ___
 The outputs can be long as a lot of commands are run in the background. You can use `%%capture` magic to hide the cell output.
 ```
 %%capture
-!wget -nc https://raw.githubusercontent.com/brpy/colab-pdf/master/colab_pdf.py
+!wget -nc https://raw.githubusercontent.com/shan18/colab-pdf/master/colab_pdf.py
 from colab_pdf import colab_pdf
 colab_pdf('pandas-assignment.ipynb')
 ```
